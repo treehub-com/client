@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang=en>
+<head>
+  <meta charset=utf-8>
+  <title></title>
+  <script type="module">
+    import {n, Element} from '../index.js';
+
+    window.customElements.define('test-elem', class extends Element {
+      render() {
+        return 'Hello World!';
+      }
+    });
+  </script>
+</head>
+<body>
+  <test-elem></test-elem>
+</body>
+</html>

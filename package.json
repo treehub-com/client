@@ -1,0 +1,26 @@
+{
+  "name": "@treehub/client",
+  "version": "0.0.0",
+  "description": "Treehub Client",
+  "scripts": {
+    "cy:run": "cypress run -b chrome",
+    "start": "superstatic --port 8080",
+    "test": "start-server-and-test start http://localhost:8080/ cy:run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/treehub-com/client.git"
+  },
+  "keywords": [],
+  "author": "John Clark <socrates37@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/treehub-com/client/issues"
+  },
+  "homepage": "https://github.com/treehub-com/client#readme",
+  "devDependencies": {
+    "cypress": "2.0.3",
+    "start-server-and-test": "1.0.1",
+    "superstatic": "5.0.1"
+  }
+}

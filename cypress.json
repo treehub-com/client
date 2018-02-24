@@ -1,0 +1,4 @@
+{
+  "integrationFolder": "package",
+  "testFiles": "**/*.test.js"
+}

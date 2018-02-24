@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang=en>
+<head>
+  <meta charset=utf-8>
+  <title></title>
+  <script type="module">
+    import {n, Element} from '../index.js';
+
+    window.customElements.define('test-elem', class extends Element {
+      static get props() {
+        return {
+          clicked: {default: 0},
+        }
+      }
+
+      click() {
+        this.clicked++;
+      }
+
+      reset() {
+        this.clicked = 0;
+      }
+
+      render() {
+        return [
+          n('test-clicked', {onclick: this.click}, `Clicked ${this.clicked} times`),
+          n('br'),
+          n('test-reset', {onclick: this.reset}, 'Reset'),
+        ]
+      }
+    });
+  </script>
+</head>
+<body>
+  <test-elem></test-elem>
+</body>
+</html>
